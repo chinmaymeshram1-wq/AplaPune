@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AplaPune - Smart Traffic Map</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AplaPune — Prototype</title>
 
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 
-  <!-- Leaflet Geocoder Plugin CSS (for search bar) -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
-  />
+  <!-- Leaflet Geocoder -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+  <!-- Leaflet Routing Machine CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f4f6f8;
-    }
-    h1 {
-      background: #2c3e50;
-      color: #fff;
-      padding: 15px 0;
-      margin: 0;
-      font-size: 28px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    }
-    #map {
-      height: 90vh;
-      width: 100%;
-    }
-  </style>
 </head>
-
 <body>
-  <h1>🚦 AplaPune: Real-Time Traffic Signal Map</h1>
+  <header>
+    <h1>🚦 AplaPune — Smart Traffic Prototype</h1>
+    <div id="top-controls">
+      <button id="locate-btn" title="Show my location">📍 Show my location</button>
+      <button id="nearest-signal-btn" title="Find nearest signal">📡 Nearest signal</button>
+      <span id="status"></span>
+    </div>
+  </header>
 
-  <!-- ✅ Map container -->
   <div id="map"></div>
 
-  <!-- ✅ Leaflet JS -->
+  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-  <!-- ✅ Leaflet Geocoder Plugin JS (for search bar) -->
+  <!-- Leaflet Geocoder -->
   <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
-  <!-- ✅ Your custom JavaScript -->
+  <!-- Leaflet Routing Machine (uses OSRM demo server) -->
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+  <!-- Custom script -->
   <script src="script.js"></script>
 </body>
 </html>
