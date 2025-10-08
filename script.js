@@ -7,7 +7,8 @@ const MAPTILER_KEY = "KWO6K8xGWMGRZgSibjNN";
 const map = L.map("map").setView([18.5204, 73.8567], 12);
 
 // MapTiler tile layer
-L.tileLayer(`https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=${KWO6K8xGWMGRZgSibjNN}`, {
+L.tileLayer(`https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=${MAPTILER_KEY}`, {
+
   attribution: '&copy; <a href="https://www.maptiler.com/">MapTiler</a> contributors',
   maxZoom: 20,
 }).addTo(map);
@@ -246,4 +247,5 @@ map.on('zoomend', () => {
     }
   });
 });
+
 
