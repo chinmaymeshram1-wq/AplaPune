@@ -47,7 +47,26 @@ header h1 { margin: 0; font-size: 20px; }
 .signal-green { background: #2ecc71; }
 .signal-red { background: #e74c3c; }
 
-/* User marker icon style (if using CSS-based) */
+/* Countdown label (appears below signal) */
+.countdown-label {
+  display: inline-block;
+  min-width: 26px;
+  text-align: center;
+  font-weight: 600;
+  padding: 2px 4px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1;
+  color: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+.countdown-green { background: #2ecc71; }
+.countdown-red { background: #e74c3c; }
+
+/* Hide countdown labels when not shown */
+.countdown-hidden { display: none; }
+
+/* User marker icon style */
 .user-icon {
   display:inline-block;
   width:32px; height:32px;
