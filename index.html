@@ -18,17 +18,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>🚦 AplaPune — Smart Traffic Prototype</h1>
-    <div id="top-controls">
-      <button id="locate-btn" title="Show my location">📍 Show my location</button>
-      <button id="nearest-signal-btn" title="Find nearest signal">📡 Nearest signal</button>
-      <span id="status"></span>
-    </div>
-  </header>
+ <header>
+  <h1>🚦 AplaPune — Smart Traffic Prototype</h1>
+  <div id="top-controls">
+    <button id="locate-btn" title="Show my location">📍 Show my location</button>
+    <button id="nearest-signal-btn" title="Find nearest signal">📡 Nearest signal</button>
+    <span id="status"></span>
+  </div>
+</header>
 
-  <!-- ✅ Map Container -->
-  <div id="map"></div>
+<!-- 🟢 New category bar like Google Maps -->
+<div id="category-bar">
+  <button class="chip chip-active" data-mode="signals">🚦 Signals</button>
+  <button class="chip" data-mode="density">📊 Traffic density</button>
+  <button class="chip" data-mode="crowd">👥 Crowd hotspots</button>
+</div>
+
+<div id="map"></div>
 
   <!-- ✅ Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -43,3 +49,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
